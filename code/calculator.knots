@@ -1,0 +1,38 @@
+//V0.1.1+
+fun:fun main() {
+    print_online("Number 1: ")
+    float64 num1 = csh.Convert.ToDouble(read())
+
+    print_online("Operator (+, -, *, /): ")
+    string op = read()
+
+    print_online("Number 2: ")
+    float64 num2 = csh.Convert.ToDouble(read())
+
+    float64 result = sum(num1, op, num2)
+
+    print($"{num1} {op} {num2} = {result}")
+
+    print("Hit enter to close program!")
+    read()
+}
+
+fun:float64 sum(float64 num1, string op, float64 num2) {   
+    switch (op) {
+        case "*":
+            return num1 * num2
+
+        case "/":
+            return num1 / num2
+
+        case "-":
+            return num1 - num2
+
+        case "+":
+            return num1 + num2
+        
+        default:
+            print("Error: Invalid operator!");
+            return -404
+    }
+}

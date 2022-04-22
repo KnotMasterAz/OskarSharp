@@ -1,0 +1,4 @@
+Instead of using generics for arrays maybe have
+datatype fixed_length_array = array_create_fixed();
+and copy that value
+and array_create_list for lists

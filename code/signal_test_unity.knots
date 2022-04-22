@@ -1,0 +1,25 @@
+//V0.2.1
+string signal = "Test Signal Sent"
+string CHANNEL = "sigTest"
+
+fun csh.Start() {
+    unity_print("Press A to send a test signal!")
+}
+
+fun csh.Update() {
+    if (csh.Input.GetKeyDown(KeyCode.A)) {
+        unity_add_signal(CHANNEL, signal)
+    }
+    check();
+}
+
+fun csh.OnDestroy() {
+    unity_signal_destroy()
+}
+
+fun check() {
+    if (unity_signal_exists(CHANNEL, signal)) {
+        unity_print($"Signal exists {signal} on channel {CHANNEL}")
+        unity_remove_signal(CHANNEL, signal)
+    }
+}

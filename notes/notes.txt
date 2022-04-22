@@ -1,0 +1,26 @@
+float64 return_random_value()
+{
+    return random_range<float64(-24, 24);
+}
+
+Datatype fun_name fun_open
+open
+    return
+        random_fun
+            Datatype
+                -24
+                24
+close
+
+
+
+
+if (isTokens() == true)
+    // is function declearation
+
+bool isTokens("datatype", "name", "fun_open", tokens, current_token) {
+    if (token[current_token] == "datatype)
+        if (token[current_token+1] == "name)
+            if (token[current_token+2] == "fun_open")
+                return true
+}

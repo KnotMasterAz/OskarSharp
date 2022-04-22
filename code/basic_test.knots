@@ -1,0 +1,47 @@
+//V0.1.0+
+fun:fun main() {
+    const number pi = 3.14
+    number num = 10.46
+    string name = "Hello"
+    num = 13
+    bool i = false
+    print($"{num} {name} test!")
+    if (num == 13) {
+        print("num is 13")
+    } else if (num == 10) {
+        print("num is 10")
+    } else {
+        print("num is not \"13\" or \"10\"")
+    }
+    number num1, num2
+    num1 = 69
+    num2 = 621
+    print($"num1 * num2 = {sum(num1, "*", num2)}")
+    print($"num1 / num2 = {sum(num1, "/", num2)}")
+    print($"num1 + num2 = {sum(num1, "+", num2)}")
+    print($"num1 - num2 = {sum(num1, "-", num2)}")
+    if (true != false && false == false) {
+        if (10 == 10 || 10 != 10) {
+            print("If you failed to reach this, you failed")
+        }
+    }
+}
+
+fun:number sum(number num1, string op, number num2) {   
+    switch (op) {
+        case "*":
+            return num1 * num2
+
+        case "/":
+            return num1 / num2
+
+        case "-":
+            return num1 - num2
+
+        case "+":
+            return num1 + num2
+
+        default:
+            return -404
+    }
+}

@@ -1,0 +1,53 @@
+//V2.0.0+
+
+directive_version("2.0.0+")
+
+directive_replace("hello","hello()")
+
+directive_replace("define_hello","fun:pure print(str message)\n{\nprint(message)\n}")
+
+
+fun:pure main() {
+    print($"Hello, world! {returnTest(\"test\")")
+    infer i = 10
+    i++
+    i--
+    i += 10
+    i -= 10
+    i *= 10
+    i /= 10
+    i %= 10
+
+    while (true) {
+        print("Hello, world!")
+        break
+    }
+
+    for (i = 0; i < 10; i++) {
+        print("Hello, world!")
+    }
+
+    hello
+}
+
+define_hello
+
+fun:str returnTest(str s) {
+    return s
+}
+
+fun:pure loopTest() {
+    while (true) {
+        print("Hello, world!")
+        break
+    }
+
+    for (infer i = 0; i < 10; i++) {
+        print("Hello, world!")
+    }
+
+    // should compile to: for (infer i = 0; i < 10; i++) { print("Hello, world!") }
+    lp (i < 10) {
+        print("Hello, world!")
+    }
+}
