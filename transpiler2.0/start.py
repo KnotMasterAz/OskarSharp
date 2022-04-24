@@ -115,7 +115,7 @@ def template_generate(run=False, file="hello", template="Console", script_name="
     elif template == "Unity":
         # Generate directory structure
         os.makedirs(f"output/{namespace_non_console}", exist_ok=True)
-        shutil.copyfile("transpiler2.0/templates/Unity/Signal.cs", f"output/{namespace_non_console}/Signal.cs")
+        shutil.copyfile("transpiler2.0/templates/unity/Signal.cs", f"output/{namespace_non_console}/Signal.cs")
         os.chdir(f'output/{namespace_non_console}')
 
         # generate the script template and populate it with the output of the knots file
