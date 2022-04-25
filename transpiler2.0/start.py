@@ -160,13 +160,13 @@ def transpile(file, tab=True):
             line = line.replace("number", "double")
             line = line.replace("generic<Type>", "T")
             line = line.replace("<Type>", "<T>")
-            line = line.replace("fun main()", "void Main(string[] args)")
+            line = line.replace("fun:fun main()", "static void Main(string[] args)")
             line = line.replace("fun", "void")
+            line = line.replace("fun:", "static ")
             line = line.replace(".length", ".Length")
             line = line.replace("print_online", "Console.Write")
             line = line.replace("print", "Console.WriteLine")
             line = line.replace("read", "Console.ReadLine")
-            line = line.replace("fun:", "static ")
             line = line.replace("csh.", "")
 
             # More data types
