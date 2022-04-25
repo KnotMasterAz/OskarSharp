@@ -10,7 +10,7 @@ fun csh.Update() {
     if (csh.Input.GetKeyDown(KeyCode.A)) {
         unity_add_signal(CHANNEL, signal)
     }
-    check();
+    check()
 }
 
 fun csh.OnDestroy() {
