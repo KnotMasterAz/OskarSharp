@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = knot
-build_property.ProjectDir = D:\dev\oskar\test_version_1_0\output\knot\
+build_property.ProjectDir = d:\dev\oskar\test_version_1_0\output\knot\

@@ -99,6 +99,8 @@ class Tokens():
     for_loop_lang = "for"
     while_loop = "while"
     while_loop_lang = "while"
+    lp_loop = "lp"
+    lp_loop_lang = "for"
     
     # continue and break
     continue_ = "continue"

@@ -1,8 +1,8 @@
-//V0.1.0+
+//V0.2.2+
 // Standard library implemented in language for test (zero-pointers except one handled by the language to pass a ref to the array)
 
 // number -> double (default assign to 0)
-// string -> string (default assign to "")
+// str -> string (default assign to "")
 // bool -> bool (default assign to false)
 
 // generic<Type>[] array_add<Type>(generic<Type>[] array_a, generic<Type>[] array_b) {
@@ -26,12 +26,12 @@
 * test
 */
 
-fun:fun main() {
+fun:pure main() {
 
     const number pi = 3.14
 
     number num = 10.46
-    string name = "Hello"
+    str name = "Hello"
 
     num = 13
 
@@ -71,7 +71,7 @@ fun:fun main() {
     }
 }
 
-fun:number sum(number num1, string op, number num2) {   
+fun:number sum(number num1, str op, number num2) {   
     switch (op) {
         case "*":
             return num1 * num2

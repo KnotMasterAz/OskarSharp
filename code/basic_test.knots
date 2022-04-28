@@ -1,8 +1,8 @@
-//V0.1.0+
-fun:fun main() {
+//V0.2.2+
+fun:pure main() {
     const number pi = 3.14
     number num = 10.46
-    string name = "Hello"
+    str name = "Hello"
     num = 13
     bool i = false
     print($"{num} {name} test!")
@@ -27,7 +27,7 @@ fun:fun main() {
     }
 }
 
-fun:number sum(number num1, string op, number num2) {   
+fun:number sum(number num1, str op, number num2) {   
     switch (op) {
         case "*":
             return num1 * num2

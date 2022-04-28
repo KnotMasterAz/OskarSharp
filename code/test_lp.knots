@@ -1,0 +1,6 @@
+//V0.3.0+
+fun:pure main() {
+    lp (test < 10) {
+        print($"Number: {test+1}")
+    }
+}

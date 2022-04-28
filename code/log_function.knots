@@ -1,5 +1,5 @@
-//V0.1.0+
-fun:string log_messsage(uint8 level, string message) {
+//V0.2.2+
+fun:str log_messsage(uint8 level, str message) {
     infer _log = $"{level}-{message}"
     print("{_log}")
     return _log

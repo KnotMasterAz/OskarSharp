@@ -1,0 +1,3 @@
+Az: A modern lightweight transpiler written in Oskar (Sharp)
+Oskar: A simple programming language that compiles to elegant C# code
+Knot: A package (bundle of code) fed to Az containing Oskar code telling Az how to transpile the Oskar code

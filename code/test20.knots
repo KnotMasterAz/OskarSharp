@@ -6,9 +6,12 @@ directive_replace("hello","hello()")
 
 directive_replace("define_hello","fun:pure print(str message)\n{\nprint(message)\n}")
 
+cs {
+    using System.Collections.Generic;
+}
 
 fun:pure main() {
-    print($"Hello, world! {returnTest(\"test\")")
+    print($"Hello, world! {returnTest("test")}")
     infer i = 10
     i++
     i--
@@ -47,7 +50,11 @@ fun:pure loopTest() {
     }
 
     // should compile to: for (infer i = 0; i < 10; i++) { print("Hello, world!") }
-    lp (i < 10) {
-        print("Hello, world!")
+    lp (while_is_less_than_ten < 10) {
+        print($"Hello, world! {while_is_less_than_ten}")
     }
 }
+
+fun :bool break_test() { fun_ = 10; while (true) { print("Hello, world!"); break; } return fun_; }
+
+fun test() {}

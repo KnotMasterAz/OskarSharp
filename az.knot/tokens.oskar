@@ -1,0 +1,217 @@
+// Parmas
+str l_param = "("
+str l_param_lang = "("
+str r_param = ")"
+str r_param_lang = ")"
+
+// Square Brackets
+str l_brackets = "["
+str l_brackets_lang = "["
+str r_brackets = "]"
+str r_brackets_lang = "]"
+
+// Curly Brackets
+str l_curly = "{"
+str l_curly_lang = "{"
+str r_curly = "}"
+str r_curly_lang = "}"
+
+// strings
+str quote = "\""
+str quote_lang = "\""
+str escape_chr = "\\"
+str escape_chr_lang = "\\"
+str newline = "\n"
+str newline_lang = "\n"
+str string_format = "$"
+str string_format_lang = "$"
+
+// operators
+str plus = "+"
+str plus_lang = "+"
+str minus = "-"
+str minus_lang = "-"
+str mult = "*"
+str mult_lang = "*"
+str div = "/"
+str div_lang = "/"
+str mod = "%"
+str mod_lang = "%"
+str pow = "^"
+str pow_lang = "^"
+str assign = "="
+str assign_lang = "="
+str assign_plus = "+="
+str assign_plus_lang = "+="
+str assign_minus = "-="
+str assign_minus_lang = "-="
+str assign_mult = "*="
+str assign_mult_lang = "*="
+str assign_div = "/="
+str assign_div_lang = "/="
+str assign_mod = "%="
+str assign_mod_lang = "%="
+str not_equal = "!="
+str not_equal_lang = "!="
+str equal = "=="
+str equal_lang = "=="
+str negation = "not"
+str negation_lang = "!"
+str and_ = "and"
+str and_lang = "&&"
+str or_ = "or"
+str or_lang = "||"
+str greater = ">"
+str greater_lang = ">"
+str greater_equal = ">="
+str greater_equal_lang = ">="
+str less = "<"
+str less_lang = "<"
+str less_equal = "<="
+str less_equal_lang = "<="
+
+// termination statement
+str termination = ";"
+str termination_lang = ";"
+
+// Comments (single line)
+str comment_single = "//"
+str comment_single_lang = "//"
+
+// Comments (multi line)
+str comment_multi = "/*"
+str comment_multi_lang = "/*"
+str comment_multi_end = "*/"
+str comment_multi_end_lang = "*/"
+
+// switch statement
+str switch_ = "switch"
+str switch_lang = "switch"
+str case_ = "case"
+str case_lang = "case"
+str default = "default"
+str default_lang = "default"
+
+// loops
+str for_loop = "for"
+str for_loop_lang = "for"
+str while_loop = "while"
+str while_loop_lang = "while"
+str lp_loop = "lp"
+str lp_loop_lang = "for"
+
+// continue and break
+str continue_ = "continue"
+str continue_lang = "continue"
+str break_ = "break"
+str break_lang = "break"
+
+// if statement
+str if_ = "if"
+str if_lang = "if"
+
+// C#
+str csharp = "csh"
+str csharp_lang = ""
+
+// seperator
+str seperator = ","
+str seperator_lang = ","
+
+// function keyword
+str fun = "fun:"
+str fun_lang = "static"
+
+// Generic data types
+
+// void
+str void = "pure"
+str void_lang = "void"
+
+// string
+str string = "str"
+str string_lang = "string"
+
+// character
+str character = "chr"
+str character_lang = "char"
+
+// num
+str number = "num"
+str number_lang = "double"
+
+// boolean
+str bool = "bool"
+str bool_lang = "bool"
+
+// true
+str true = "true"
+str true_lang = "true"
+
+// false
+str false = "false"
+str false_lang = "false"
+
+// null
+str null = "nil"
+str null_lang = "null"
+
+// More data types
+
+// Unsigned
+
+// uint64
+str uint64 = "uint64"
+str uint64_lang = "uint64"
+
+// uint32
+str uint32 = "uint32"
+str uint32_lang = "uint"
+
+// uint16
+str uint16 = "uint16"
+str uint16_lang = "ushort"
+
+// uint8
+str uint8 = "uint8"
+str uint8_lang = "byte"
+
+// Signed
+
+// int64
+str int64 = "int64"
+str int64_lang = "long"
+
+// int32
+str int32 = "int32"
+str int32_lang = "int"
+
+// int16
+str int16 = "int16"
+str int16_lang = "short"
+
+// int8
+str int8 = "int8"
+str int8_lang = "sbyte"
+
+// Floats
+
+// Float64
+str float64 = "float64"
+str float64_lang = "double"
+
+// Float32
+str float32 = "float32"
+str float32_lang = "float"
+
+// Auto infer type
+str infer = "auto"
+str infer_lang = "var"
+
+// spaces
+str space = " "
+str space_lang = " "
+
+// Return
+str return_ = "ret"
+str return_lang = "return"

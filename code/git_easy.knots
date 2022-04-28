@@ -1,5 +1,5 @@
-//V0.1.0+
-fun:fun main() {
+//V0.2.2+
+fun:pure main() {
     while (true) {
         infer git_message = get_input("Enter git message")
         csh.System.Diagnostics.Process.Start("git", "pull")
@@ -13,7 +13,7 @@ fun:fun main() {
     }
 }
 
-fun:string get_input(string message) {
+fun:str get_input(str message) {
     print_online($"{message}: ")
     return read()
 }

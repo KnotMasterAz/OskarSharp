@@ -16,7 +16,7 @@ close
 
 
 if (isTokens() == true)
-    // is function declearation
+    // is function declaration
 
 bool isTokens("datatype", "name", "fun_open", tokens, current_token) {
     if (token[current_token] == "datatype)

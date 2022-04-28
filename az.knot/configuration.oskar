@@ -1,0 +1,22 @@
+//V0.4.0
+// Above is legacy to prevent the python transpiler from breaking running code newer than is supports
+
+str BUILD_SINGAL = "knot"
+str FILE_EXTENSION = ".oskar"
+
+fun:fun main() {
+    create_empty_file(BUILD_SINGAL)
+    str[] files = file_list($"*{FILE_EXTENSION}")
+
+    lp (file < files.len) {
+        file_write_append(BUILD_SINGAL, file_read(files[file]))
+    }
+
+    if (validate_file(BUILD_SINGAL)) {
+        print("Unable to build")
+        return
+    }
+
+    directive_build()
+    print("File built successfully")
+}

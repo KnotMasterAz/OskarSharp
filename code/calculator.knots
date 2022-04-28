@@ -1,10 +1,10 @@
-//V0.1.1+
-fun:fun main() {
+//V0.2.2+
+fun:pure main() {
     print_online("Number 1: ")
     float64 num1 = csh.Convert.ToDouble(read())
 
     print_online("Operator (+, -, *, /): ")
-    string op = read()
+    str op = read()
 
     print_online("Number 2: ")
     float64 num2 = csh.Convert.ToDouble(read())
@@ -17,7 +17,7 @@ fun:fun main() {
     read()
 }
 
-fun:float64 sum(float64 num1, string op, float64 num2) {   
+fun:float64 sum(float64 num1, str op, float64 num2) {   
     switch (op) {
         case "*":
             return num1 * num2
