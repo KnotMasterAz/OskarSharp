@@ -1,0 +1,15 @@
+D:\dev\oskar\test_version_1_0\output\knot\bin\Debug\net6.0\knot.exe
+D:\dev\oskar\test_version_1_0\output\knot\bin\Debug\net6.0\knot.deps.json
+D:\dev\oskar\test_version_1_0\output\knot\bin\Debug\net6.0\knot.runtimeconfig.json
+D:\dev\oskar\test_version_1_0\output\knot\bin\Debug\net6.0\knot.dll
+D:\dev\oskar\test_version_1_0\output\knot\bin\Debug\net6.0\ref\knot.dll
+D:\dev\oskar\test_version_1_0\output\knot\bin\Debug\net6.0\knot.pdb
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.csproj.AssemblyReference.cache
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.AssemblyInfoInputs.cache
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.AssemblyInfo.cs
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.csproj.CoreCompileInputs.cache
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.dll
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\ref\knot.dll
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.pdb
+D:\dev\oskar\test_version_1_0\output\knot\obj\Debug\net6.0\knot.genruntimeconfig.cache
