@@ -4,7 +4,7 @@
 *   Transpiler and language design of KnotsSharp by Az Foxxo (GitHub @KnotMasterAz)
 *   You may remove this notice if you wish partly or entirely
 *
-*   Compiled 2022-04-28 05:18:58.292800 with version 1.0.0
+*   Compiled 2022-04-29 04:01:58.041454 with version 1.0.0
 */
 
 using System;

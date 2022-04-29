@@ -67,7 +67,7 @@ def validate_version(file):
                     log("WARNING: Version mismatch! Forcing compile!")
 
 def add_notice():
-    with open("transpiler2.0/templates/general/notice.txt", "r") as notice:
+    with open("__________OLD_transpiler2.0/templates/general/notice.txt", "r") as notice:
         notice_text = notice.read()
         notice_text += "\n\n"
         notice_text = notice_text.replace("__COMPILED__", str(datetime.datetime.now()))
@@ -130,7 +130,7 @@ def template_generate(run=False, file="hello", template="Console", script_name="
 
         # Generate directory structure
         os.makedirs(f"output/{namespace_non_console}", exist_ok=True)
-        shutil.copyfile("transpiler2.0/templates/Unity/Signal.cs", f"output/{namespace_non_console}/Signal.cs")
+        shutil.copyfile("__________OLD_transpiler2.0/templates/Unity/Signal.cs", f"output/{namespace_non_console}/Signal.cs")
         os.chdir(f'output/{namespace_non_console}')
 
         # generate the script template and populate it with the output of the knots file

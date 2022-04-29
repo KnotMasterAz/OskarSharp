@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dev\\oskar\\test_version_1_0\\output\\knot\\knot.csproj",
+      "projectUniqueName": "D:\\dev\\OskarSharp\\test_version_1_0\\output\\knot\\knot.csproj",
       "projectName": "knot",
-      "projectPath": "D:\\dev\\oskar\\test_version_1_0\\output\\knot\\knot.csproj",
+      "projectPath": "D:\\dev\\OskarSharp\\test_version_1_0\\output\\knot\\knot.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\dev\\oskar\\test_version_1_0\\output\\knot\\obj\\",
+      "outputPath": "D:\\dev\\OskarSharp\\test_version_1_0\\output\\knot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
