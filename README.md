@@ -17,6 +17,7 @@ A simple non-OOP programming language that "transpiles" into a C# code
 Simple, no boilerplate, enjoyable, minimal OOP styled code, cross platform
 
 ## To-do
+- [ ] Change file extension to .oskar in code directory
 - [x] Console template
 - [X] Remove requirement on bash (rewrite build script in Python)
 - [X] Version validation
