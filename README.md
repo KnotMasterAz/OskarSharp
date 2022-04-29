@@ -1,4 +1,4 @@
-# KnotsSharp
+# OskarSharp
 
 ## Information
 
