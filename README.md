@@ -49,7 +49,7 @@ Simple, no boilerplate, enjoyable, minimal OOP styled code, cross platform
 ```sh
     git clone https://github.com/KnotMasterAz/KnotsSharp.git
     cd KnotsSharp
-    python transpiler2.0/start.py code/hello.knots --run --Console
+    python __________OLD_transpiler2.0/start.py code/hello.oskar --run --Console # Compile using the legacy compiler
 ```
 
 ## Examples
