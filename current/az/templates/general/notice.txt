@@ -1,0 +1,8 @@
+/*
+*   File has been transpiled by the Az transpiler
+*   An open-source transpiler and language under the anarchist Licence
+*   Transpiler and language design of OskarSharp by Az Foxxo (GitHub @KnotMasterAz)
+*   You may remove this notice if you wish partly or entirely
+*
+*   Compiled __COMPILED__ with version __VERSION__
+*/
