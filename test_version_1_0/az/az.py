@@ -183,19 +183,23 @@ def transpile(file, tab=True):
 
             # Unity generic
             line = line.replace("unity_print", "Debug.Log")
-            
+            line = line.replace("unity_create", "Instantiate")
+            line = line.replace("unity_destroy", "Destroy")
+
             # Unity useful stuff
             line = line.replace("u_show", "[SerializeField]")
             line = line.replace("u_hide", "[HideInInspector]")
             
             # Unity types
+            line = line.replace("uv3_new", "new uv3")
             line = line.replace("uv3", "Vector3")
+            line = line.replace("uv2_new", "new uv3")
             line = line.replace("uv2", "Vector2")
             line = line.replace("ugm", "GameObject")
-            line = line.replace("utrans", "Transform");
+            line = line.replace("utrans", "Transform")
 
             # input += line
-            line = line.replace("number", "double")
+            line = line.replace("num", "double")
             line = line.replace("chr", "char")
             line = line.replace("generic<Type>", "T")
             line = line.replace("<Type>", "<T>")
