@@ -144,6 +144,10 @@ def code_generation():
             elif line.startswith(return_token):
                 code += return_lang + " "
                 continue
+            # Constants
+            elif line.startswith(constant_token):
+                code += constant_lang + " "
+                continue
 
     # Add alias for console write to print
     code += f"\n\n static void print(string message) => Console.Write(message);"
