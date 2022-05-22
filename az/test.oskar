@@ -3,7 +3,10 @@ fun:pure main() {
     {
         print("Hello, Knots!\nAwoos~\n");
 
-        const float32 i = 5;
+        const float32 add = adder(5, 6);
+        const float32 minus = subtractor(5, 6);
+        const float32 mult = multiplier(5, 6);
+        const float32 div = divider(5, 6);
     }
 }
 
