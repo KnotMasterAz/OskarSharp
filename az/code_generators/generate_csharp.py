@@ -1,5 +1,11 @@
 from tokenisation.tokens import *
 
+'''
+    Please note this code generator is incomplete and will not work for all cases.
+    This script only contains the basic functionality to generate code the code for the test script.
+    The code generator will be expanded to include more functionality in the future however is not yet complete.
+'''
+
 code = ""
 
 def code_generation():
