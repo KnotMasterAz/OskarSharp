@@ -173,7 +173,7 @@ separators_token = "SEPARATORS"
 # function keyword
 function = "fun"
 function_lang = "static"
-function_token = "FUN"
+function_token = "FUNCTION_DECLARATION"
 
 # Generic data types
 

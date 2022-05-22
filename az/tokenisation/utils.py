@@ -31,6 +31,33 @@ def GetPositionOfNextCharacter(source, index):
 def ReturnCharacter(source, index):
     return source[index]
 
+# Mathematical operators
+def GetTokenForMathematicalOperator(character):
+    # Addition
+    if (character == plus):
+        return plus_token
+    # Subtraction
+    elif (character == minus):
+        return minus_token
+    # Multiplication
+    elif (character == mult):
+        return mult_token
+    # Division
+    elif (character == div):
+        return div_token
+    # Modulus
+    elif (character == mod):
+        return mod
+    # Power
+    elif (character == pow):
+        return pow_token
+    # Equals
+    elif (character == assign):
+        return assign_token
+
+    # Return invalid token
+    return "INVALID"
+
 def GetTokenForSemanticSeparator(character):
     # Params
     # Left
@@ -55,10 +82,6 @@ def GetTokenForSemanticSeparator(character):
     # Denote type
     elif (character == denote):
         return denote_token
-
-    # Equals
-    elif (character == assign):
-        return assign_token
     
     # Termination
     elif (character == termination):

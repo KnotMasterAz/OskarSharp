@@ -1,4 +1,4 @@
-fun:pure main("") {
+fun:pure main() {
     lp (i < 10)
     {
         print("Hello, Knots!\nAwoos~\n");

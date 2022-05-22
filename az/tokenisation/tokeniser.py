@@ -1,3 +1,4 @@
+from tokenisation.utils import GetTokenForMathematicalOperator
 from tokenisation.utils import GetTokenForSemanticSeparator
 from tokenisation.utils import IsValidName
 from tokenisation.utils import tokenPrevious
@@ -188,6 +189,11 @@ def loopSourceAndGenerateTokens(source):
 
         # Get the token for the character
         token = GetTokenForSemanticSeparator(character)
+
+        # Get mathematical symbols
+        if token == "INVALID":
+            token = GetTokenForMathematicalOperator(character)
+
         if (token != "INVALID"):
             yield token
         else:
