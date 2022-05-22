@@ -27,12 +27,12 @@ context_clear_previous = "clear_previous"
 #         context_history.append(scope)
 #     context = context_history[-]
 
-def language_set_mode(mode):
-    # print(f"Setting language mode to {mode}")
+def LanguageSetMode(mode):
+    print(f"Setting language mode to {mode}")
     global context
     context = mode
 
-def wordComplete(word):
+def returnKeywordTokenElseInvalid(word):
     # And token
     if word == and_:
         return and_token
@@ -157,21 +157,40 @@ def loopSourceAndGenerateTokens(source):
         # Get the character
         character = ReturnCharacter(source, iteration)
 
+        # Extract single line comment
+        if context == context_comment_single:
+            iteration += 1
+            if character == "\n":
+                LanguageSetMode(context_global)
+                yield f"@{comment_single_token}@{word}@{comment_single_token}@"
+                word = ""
+            else:
+                word += character
+            continue
+
         # String language mode - extract string from quotes
         if context == context_string:
             iteration += 1
             if character == quote:
-                language_set_mode(context_global)
+                LanguageSetMode(context_global)
                 yield f"@STRING@{word}@STRING_END@"
                 word = ""
             else:
                 word += character
             continue
 
+        # Enter comment mode
+        if character == comment_single[0]:
+            com_len = comment_single.__len__()
+            if source[iteration:iteration+com_len] == comment_single:
+                LanguageSetMode(context_comment_single)
+                iteration += com_len
+                continue
+
         # Enter string language mode
         if character == quote:
             # Change to string mode
-            language_set_mode(context_string)
+            LanguageSetMode(context_string)
             iteration += 1
             continue
 
@@ -186,7 +205,7 @@ def loopSourceAndGenerateTokens(source):
             iteration += 1
             if iteration < len(source):
                 if not IsValidName(source[iteration]):
-                    yield wordComplete(word)
+                    yield returnKeywordTokenElseInvalid(word)
                     word = ""
             continue
 
