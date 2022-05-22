@@ -1,39 +1,24 @@
-from templates import Templates
-from tokens import Tokens
+from templates import Templates # Language templates
+from code_generators import generate_csharp # C# code generator
 
-from utils import writeTokens
+from tokenisation.tokeniser import tokeniser
 
 # Source files
 sourcefile = "test.az"
 source = ""
+tokenised_source = ""
 
-# Language mode
-context = context_global = "global"
-context_string = "string"
-context_comment_single = "comment_single"
-context_comment_multi = "comment_multi"
 
-# Return true if the character is a semantic separator
-def IsSpaceOrSemanticSeparator(character):
-    if character == " " or character.isalpha() or character.isnumeric() or character == "_":
-        return False
-    return True
 
-def loopThroughSourceFile(source):
-    iteration = 0
-    word = ""
-    while iteration < len(source):
-        if (IsSpaceOrSemanticSeparator(source[iteration])):
-            yield word
-            word = ""
-        word += source[iteration]
-        # print(token)
-        iteration += 1
+# Generate code
+def build_code(tokens):
+    generate_csharp(tokens)
+
+
 
 with open(sourcefile, "r") as f:
+    # read file contains
     source = f.read()
-    # splitted_source = source.split("\n")
-    writeTokens(loopThroughSourceFile(source))
 
-def tokenPrevious(tokens, index):
-    return tokens[index - 1]
+    # Tokenize
+    tokeniser(source)

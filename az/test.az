@@ -1,55 +1,25 @@
-~directive_set("az_min_version", "version", "1.0.0")
-~directive_set("oskar_min_version", "version", "1.0.0")
-~directive_set("knot_min_version", "version", "1.0.0")
-~directive_set("target_output", "target", "csharp:unity")
-~directive_set("code_generation_readability", "bool", "true")
-
-~directive_code_generation_substitute_basic("test", "//")
-
-// Test script
-
-/*
-*   This file should be transpiled into semi-readable C# code using
-*/
-
-fun:pure main() {
+fun:pure main("") {
     lp (i < 10)
     {
-        print("Hello, Knots!\nAwoos~\n")
-        test my test comment
+        print("Hello, Knots!\nAwoos~\n");
 
         const float32 i = 5;
     }
 }
 
 
-fun:float64 adder(float64 a, float64 b) {
-    return a + b
+fun: float64 adder(float64 a, float64 b) {
+    return a + b;
 }
 
-fun:float64 subtractor(float64 a, float64 b) {
-    return a - b
+fun :float64 subtractor(float64 a, float64 b) {
+    return a - b;
 }
 
-fun:float64 multiplier(float64 a, float64 b) {
-    return a * b
+fun : float64 multiplier(float64 a, float64 b) {
+    return a * b;
 }
 
-fun:float64 divider(float64 a, float64 b) {
-    return a / b
-}
-
-
-// Kill the interpreter
-directive_kill_interpreter()
-
-// Test contexts
-fun:pure test() { csh { MyTestFunction(oskar { 4, 24 }); }
-csh {
-    void MyTestFunction(oskar {float64 a, float64 b}) {
-        string message = $"Hello, C# {a} and {b}!";
-        oskar {
-            print("Hello, C#")
-        }
-    }
+fun :float64 divider(float64 a, float64 b) {
+    return a/b;
 }
