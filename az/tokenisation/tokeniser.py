@@ -28,7 +28,7 @@ context_clear_previous = "clear_previous"
 #     context = context_history[-]
 
 def LanguageSetMode(mode):
-    print(f"Setting language mode to {mode}")
+    # print(f"Setting language mode to {mode}")
     global context
     context = mode
 

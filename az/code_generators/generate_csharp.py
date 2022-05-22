@@ -7,10 +7,12 @@ from tokenisation.tokens import *
 '''
 
 code = ""
+tab_size = ""
 
 def code_generation():
     # Reset code to empty
     code = ""
+    tab_size = ""
 
     # Python loop through and read each line in file
     with open("tokens.txt", "r") as f:
@@ -22,22 +24,24 @@ def code_generation():
                 code += denote_lang + " "
                 continue
             elif line.startswith(l_param_token):
-                code += l_param_lang + " "
+                code += l_param_lang
                 continue
             elif line.startswith(r_param_token):
-                code += r_param_lang + " "
+                code += r_param_lang
                 continue
             elif line.startswith(l_brackets_token):
-                code += l_brackets_lang + " "
+                code += l_brackets_lang
                 continue
             elif line.startswith(r_brackets_token):
-                code += r_brackets_lang + " "
+                code += r_brackets_lang
                 continue
             elif line.startswith(l_curly_token):
-                code += l_curly_lang + "\n"
+                code += l_curly_lang + "@NEWLINE@"
+                tab_size += "\t"
                 continue
             elif line.startswith(r_curly_token):
-                code += r_curly_lang + "\n"
+                code += r_curly_lang + "@NEWLINE@"
+                tab_size = tab_size[:-1]
                 continue
             elif line.startswith("@IDENTIFIER@"):
                 code += line.replace("@IDENTIFIER@", "")
@@ -46,31 +50,31 @@ def code_generation():
                 code += "\"" + line.replace("@STRING@", "").replace("@STRING_END@", "") + "\""
                 continue
             elif line.startswith(assign_token):
-                code += assign_lang + " "
+                code += f" {assign_lang} "
                 continue
             elif line.startswith(assign_plus_token):
-                code += assign_plus_lang + " "
+                code += " " + assign_plus_lang + " "
                 continue
             elif line.startswith(minus_token):
-                code += minus_lang + " "
+                code += " " + minus_lang + " "
                 continue
             elif line.startswith(mult_token):
-                code += mult_lang + " "
+                code += " " + mult_lang + " "
                 continue
             elif line.startswith(plus_token):
-                code += plus_lang + " "
+                code += " " + plus_lang + " "
                 continue
             elif line.startswith(pow_token):
-                code += pow_lang + " "
+                code += " " + pow_lang + " "
                 continue
             elif line.startswith(mod_token):
-                code += mod_lang + " "
+                code +=" " +  mod_lang + " "
                 continue
             elif line.startswith(div_token):
-                code += div_lang + " "
+                code += " " + div_lang + " "
                 continue
             elif line.startswith(termination_token):
-                code += termination_lang + "\n"
+                code += termination_lang + "@NEWLINE@"
                 continue
             # void
             elif line.startswith(void_token):
@@ -148,7 +152,13 @@ def code_generation():
             elif line.startswith(constant_token):
                 code += constant_lang + " "
                 continue
+            # Single line comments
+            elif line.startswith("@COMMENT_SINGLE@"):
+                code += comment_single_lang + line.replace("@COMMENT_SINGLE@", "") + "@NEWLINE@"
+                continue
 
     # Add alias for console write to print
     code += f"\n\n static void print(string message) => Console.Write(message);"
-    print(code.replace("\n", ""))
+    code = code.replace("\n", "").replace("@NEWLINE@", "\n")
+
+    print(code)
