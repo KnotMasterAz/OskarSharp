@@ -54,8 +54,8 @@ def code_generation():
             elif line.startswith(minus_token):
                 code += minus_lang + " "
                 continue
-            elif line.startswith(assign_mult_token):
-                code += assign_mult_lang + " "
+            elif line.startswith(mult_token):
+                code += mult_lang + " "
                 continue
             elif line.startswith(plus_token):
                 code += plus_lang + " "
