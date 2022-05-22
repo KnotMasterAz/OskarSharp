@@ -1,0 +1,33 @@
+// Super simple test file
+
+
+num test = 1;
+
+print(i);
+
+
+
+// Only include support for uint8 and uint64 types.
+// Don't support function calls
+
+// // _runner_init 
+// fun:uint8 runner_init()
+// {
+//     // Set i to zero
+//     uint64 i = 0;
+
+//     // If non-zero value, error - print value to console
+//     return 0;
+// }
+
+// fun:uint8 runner_tick()
+// {
+//     // Increment i by one
+//     uint64 i = i + 1; // Really need to add support for += and ++, etc. shorthand
+
+//     // Print i to console
+//     print(i);
+
+//     // If non-zero value, error - print value to console
+//     return 0;
+// }

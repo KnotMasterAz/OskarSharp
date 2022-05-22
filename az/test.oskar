@@ -1,15 +1,12 @@
 // Test single line comment
 
 fun:pure main() {
-    
-    {
-        print("Hello, Knots!\nAwoos~\n"); // Test single line comment
+    print("Hello, Knots!\nAwoos~\n"); // Test single line comment
 
-        const float32 add = adder(5, 6);
-        const float32 minus = subtractor(5, 6);
-        const float32 mult = multiplier(5, 6);
-        const float32 div = divider(5, 6);
-    }
+    const float32 add = adder(5, 6);
+    const float32 minus = subtractor(5, 6);
+    const float32 mult = multiplier(5, 6);
+    const float32 div = divider(5, 6);
 }
 
 
