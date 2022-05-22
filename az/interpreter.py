@@ -4,11 +4,9 @@ from code_generators.generate_csharp import code_generation # C# code generator
 from tokenisation.tokeniser import tokeniser
 
 # Source files
-sourcefile = "test.az"
+sourcefile = "test.oskar"
 source = ""
 tokenised_source = ""
-
-
 
 # Generate code
 def build_code():
