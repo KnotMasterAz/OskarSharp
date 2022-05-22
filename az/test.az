@@ -1,5 +1,5 @@
 fun:pure main() {
-    lp (i < 10)
+    
     {
         print("Hello, Knots!\nAwoos~\n");
 
@@ -9,17 +9,17 @@ fun:pure main() {
 
 
 fun: float64 adder(float64 a, float64 b) {
-    return a + b;
+    ret a + b;
 }
 
 fun :float64 subtractor(float64 a, float64 b) {
-    return a - b;
+    ret a - b;
 }
 
 fun : float64 multiplier(float64 a, float64 b) {
-    return a * b;
+    ret a * b;
 }
 
 fun :float64 divider(float64 a, float64 b) {
-    return a/b;
+    ret a/b;
 }

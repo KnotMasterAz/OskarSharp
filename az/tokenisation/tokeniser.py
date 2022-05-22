@@ -28,7 +28,7 @@ context_clear_previous = "clear_previous"
 #     context = context_history[-]
 
 def language_set_mode(mode):
-    print(f"Setting language mode to {mode}")
+    # print(f"Setting language mode to {mode}")
     global context
     context = mode
 
@@ -75,6 +75,9 @@ def wordComplete(word):
     # case
     elif word == case:
         return case_token
+    # return
+    elif word == return_:
+        return return_token
 
 
     # Data types
@@ -144,7 +147,7 @@ def wordComplete(word):
 
     
     # Return unknown token
-    return f"@{word}@"
+    return f"@IDENTIFIER@{word}@IDENTIFIER@"
 
 def loopSourceAndGenerateTokens(source):
     global context
@@ -204,10 +207,10 @@ def loopSourceAndGenerateTokens(source):
         # Reset word
         word = ""
 
-                
-        
-        # print(token)
+        # Increment iteration
         iteration += 1
 
 def tokeniser(source):
-    writeTokens(loopSourceAndGenerateTokens(source))
+    tokenised = loopSourceAndGenerateTokens(source)
+    writeTokens(tokenised)
+    return tokenised

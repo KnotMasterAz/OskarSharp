@@ -298,7 +298,7 @@ return_token = "RETURN"
 # Denote type
 denote = ":"
 denote_lang = ""
-denote_token = "DENOTE"
+denote_token = "OF_TYPE"
 
 # Containers
 container_open = "~@VAL@~"

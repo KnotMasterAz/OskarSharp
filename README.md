@@ -48,9 +48,9 @@ Simple, no boilerplate, enjoyable, minimal OOP styled code, cross platform
 
 ## Build
 ```sh
-    git clone https://github.com/KnotMasterAz/KnotsSharp.git
-    cd KnotsSharp
-    python __________OLD_transpiler2.0/start.py code/hello.oskar --run --Console # Compile using the legacy compiler
+    git clone https://github.com/KnotMasterAz/OskarSharp.git
+    cd OskarSharp
+    python legacy/start.py code/hello.oskar --run --Console # Compile using the legacy compiler
 ```
 
 ## Examples

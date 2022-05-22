@@ -1,5 +1,5 @@
 from templates import Templates # Language templates
-from code_generators import generate_csharp # C# code generator
+from code_generators.generate_csharp import code_generation # C# code generator
 
 from tokenisation.tokeniser import tokeniser
 
@@ -11,8 +11,8 @@ tokenised_source = ""
 
 
 # Generate code
-def build_code(tokens):
-    generate_csharp(tokens)
+def build_code():
+    code_generation()
 
 
 
@@ -22,3 +22,6 @@ with open(sourcefile, "r") as f:
 
     # Tokenize
     tokeniser(source)
+
+    # Build code
+    build_code()

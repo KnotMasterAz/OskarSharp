@@ -87,5 +87,9 @@ def GetTokenForSemanticSeparator(character):
     elif (character == termination):
         return termination_token
 
+    # Separator
+    elif (character == separators):
+        return separators_token
+
     # Return invalid token
     return "INVALID"
