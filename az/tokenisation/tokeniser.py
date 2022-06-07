@@ -84,6 +84,9 @@ def returnKeywordTokenElseInvalid(word):
     # Function
     elif word == function:
         return function_token
+    # Trigger
+    elif word == trigger:
+        return trigger_token
     # Void
     elif word == void:
         return void_token

@@ -28,6 +28,7 @@ def live_code_translation():
             break
         else:
             tokenised_source_generator = loopSourceAndGenerateTokens(val)
+            writeTokens(tokenised_source_generator)
             tokenised_source = ""
             for token in tokenised_source_generator:
                 tokenised_source += token + ", "

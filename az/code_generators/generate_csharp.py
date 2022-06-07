@@ -15,10 +15,10 @@ def code_generation():
     tab_size = ""
 
     # Python loop through and read each line in file
-    with open("tokens.txt", "r") as f:
+    with open("knot", "r") as f:
         for line in f:
             if line.startswith(function_token):
-                code += function_lang + " "
+                code += function_lang + ""
                 continue
             elif line.startswith(denote_token):
                 code += denote_lang + " "
@@ -75,6 +75,10 @@ def code_generation():
                 continue
             elif line.startswith(termination_token):
                 code += termination_lang + "@NEWLINE@"
+                continue
+            # trigger
+            elif line.startswith(trigger_token):
+                code += trigger_lang + " "
                 continue
             # void
             elif line.startswith(void_token):

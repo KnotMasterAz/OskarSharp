@@ -1,7 +1,7 @@
 from tokenisation.tokens import *
 
 def writeTokens(args):
-    with open("tokens.txt", "w") as f:
+    with open("knot", "w") as f:
         for token in args:
             f.write(f"{token}\n")
 

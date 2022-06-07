@@ -177,6 +177,11 @@ function_token = "FUNCTION_DECLARATION"
 
 # Generic data types
 
+# trigger
+trigger = "trigger"
+trigger_lang = "void"
+trigger_token = "TRIGGER_DECELERATION"
+
 # void
 void = "pure"
 void_lang = "void"
