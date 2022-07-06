@@ -132,6 +132,10 @@ def code_generation():
             elif line.startswith(boolean_token):
                 code += boolean_lang + " "
                 continue
+            # infer
+            elif line.startswith(infer_token):
+                code += infer_lang + " "
+                continue
             # if
             elif line.startswith(if_token):
                 code += if_lang + " "
