@@ -16,27 +16,6 @@ sourcefile = sys.argv[1]
 source = ""
 tokenised_source = ""
 
-# Generate code
-def build_code():
-    code_generation()
-
-def live_code_translation():
-    print("Type 'exit' to quit!")
-    while True:
-        val = input(">>> ")
-        if val == "exit":
-            break
-        else:
-            tokenised_source_generator = loopSourceAndGenerateTokens(val)
-            writeTokens(tokenised_source_generator)
-            tokenised_source = ""
-            for token in tokenised_source_generator:
-                tokenised_source += token + ", "
-            print("\n\n")
-            print(f"Tokens:\n{tokenised_source}")
-            print("\n\nC# code:")
-            build_code()
-
 if (sys.argv[1] == "--live"):
     live_code_translation()
     exit(0)
