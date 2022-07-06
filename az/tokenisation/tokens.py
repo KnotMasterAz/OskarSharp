@@ -286,7 +286,7 @@ float32_lang = "float"
 float32_token = "FLOAT32"
 
 # Auto infer type
-infer = "auto"
+infer = "infer"
 infer_lang = "var"
 infer_token = "INFER"
 
