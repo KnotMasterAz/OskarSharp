@@ -16,10 +16,6 @@ sourcefile = sys.argv[1]
 source = ""
 tokenised_source = ""
 
-if (sys.argv[1] == "--live"):
-    live_code_translation()
-    exit(0)
-
 with open(sourcefile, "r") as f:
     # read file contains
     source = f.read()
