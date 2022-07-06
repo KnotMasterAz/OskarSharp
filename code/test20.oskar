@@ -36,7 +36,7 @@ fun:pure main() {
 define_hello
 
 fun:str returnTest(str s) {
-    return s
+    ret s
 }
 
 fun:pure loopTest() {
@@ -55,6 +55,6 @@ fun:pure loopTest() {
     }
 }
 
-fun :bool break_test() { fun_ = 10; while (true) { print("Hello, world!"); break; } return fun_; }
+fun :bool break_test() { fun_ = 10; while (true) { print("Hello, world!"); break; } ret fun_; }
 
 fun test() {}

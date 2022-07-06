@@ -30,18 +30,18 @@ fun:pure main() {
 fun:number sum(number num1, str op, number num2) {   
     switch (op) {
         case "*":
-            return num1 * num2
+            ret num1 * num2
 
         case "/":
-            return num1 / num2
+            ret num1 / num2
 
         case "-":
-            return num1 - num2
+            ret num1 - num2
 
         case "+":
-            return num1 + num2
+            ret num1 + num2
 
         default:
-            return -404
+            ret -404
     }
 }

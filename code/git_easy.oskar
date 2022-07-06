@@ -15,5 +15,5 @@ fun:pure main() {
 
 fun:str get_input(str message) {
     print_online($"{message}: ")
-    return read()
+    ret read()
 }

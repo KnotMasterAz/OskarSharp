@@ -20,19 +20,19 @@ fun:pure main() {
 fun:float64 sum(float64 num1, str op, float64 num2) {   
     switch (op) {
         case "*":
-            return num1 * num2
+            ret num1 * num2
 
         case "/":
-            return num1 / num2
+            ret num1 / num2
 
         case "-":
-            return num1 - num2
+            ret num1 - num2
 
         case "+":
-            return num1 + num2
+            ret num1 + num2
         
         default:
             print("Error: Invalid operator!");
-            return -404
+            ret -404
     }
 }

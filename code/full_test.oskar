@@ -14,7 +14,7 @@
 //         else (i >= num.length) { _val = array_b[i] }
 //         new_array[i] = _val
 //     }
-//     return new_array
+//     ret new_array
 // }
 
 // array_add<number>(nums1, nums2)
@@ -74,23 +74,23 @@ fun:pure main() {
 fun:number sum(number num1, str op, number num2) {   
     switch (op) {
         case "*":
-            return num1 * num2
+            ret num1 * num2
             break
 
         case "/":
-            return num1 / num2
+            ret num1 / num2
             break
 
         case "-":
-            return num1 - num2
+            ret num1 - num2
             break
 
         case "+":
-            return num1 + num2
+            ret num1 + num2
             break
         
         default:
-            return -404
+            ret -404
             break
     }
 }
