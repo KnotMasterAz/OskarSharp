@@ -16,6 +16,10 @@ sourcefile = sys.argv[1]
 source = ""
 tokenised_source = ""
 
+# Generate code
+def build_code():
+    code_generation()
+
 with open(sourcefile, "r") as f:
     # read file contains
     source = f.read()
