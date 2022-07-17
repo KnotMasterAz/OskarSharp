@@ -1,12 +1,13 @@
 # OskarSharp
 
-## Information
+<p align="center">
+<img src="OskarSharp.png" alt="OskarSharp logo circle logo" style="height: 500px;"/><br>
+A simple, statically typed programming language focused on code generation, compiling into C#
+</p>
 
-### Description
-
-A simple non-OOP programming language that "transpiles" into a C# code
 
 ### Important
+**NOTE**: A major rewrite is in progess, the old transpiler is being replaced and language spec being updated!
 **NOTE**: This is not a compiler and merely "finds and replaces" the instances of text to their C# counterpart as such will replace this text inside of comments and strings so should **not** be used in production!
 
 ### Licence
