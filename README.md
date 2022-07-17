@@ -8,6 +8,7 @@ A simple, statically typed programming language focused on code generation, comp
 
 ### Important
 **NOTE**: A major rewrite is in progess, the old transpiler is being replaced and language spec being updated!
+
 **NOTE**: This is not a compiler and merely "finds and replaces" the instances of text to their C# counterpart as such will replace this text inside of comments and strings so should **not** be used in production!
 
 ### Licence
@@ -15,7 +16,11 @@ A simple, statically typed programming language focused on code generation, comp
 
 
 ### Goals
-Simple, no boilerplate, enjoyable, minimal OOP styled code, cross platform
+- Advance code generation
+- Imperative and strongly typed
+- Cross platform
+- Simple
+- Enjoyable
 
 ## To-do
 - [ ] Change file extension to .oskar in code directory
