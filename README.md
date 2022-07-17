@@ -1,9 +1,10 @@
-# OskarSharp
 
 <p align="center">
-<img src="OskarSharp.png" alt="OskarSharp logo circle logo" style="height: 500px;"/><br>
-A simple, statically typed programming language focused on code generation, compiling into C#
+<img src="OskarSharp.png" alt="OskarSharp logo circle logo" style="height: 300px;"/><br>
+<h1 align="center">OskarSharp</h1>
 </p>
+
+A simple, statically typed programming language focused on code generation, compiling into C#
 
 
 ### Important
