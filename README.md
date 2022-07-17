@@ -6,6 +6,15 @@
 
 A simple, statically typed programming language focused on code generation, compiling into C#
 
+## Components
+### Languages
+- Oskarsharp (programming language, transpiled, .oskar)
+- OskarSharp Embed Language (preprocessor language, interpreted, N/A)
+- OskarSharp Token Language (generated tokens, generated, .knot)
+## Parts
+- Az (transpiler for interpreting a single OskarSharp file or project.oskar file, into a OskarSharp Token Language and then transpile that into C#)
+- OskarSharp (Oskarsharp & OskarSharp Embed Language)
+
 
 ### Important
 **NOTE**: A major rewrite is in progess, the old transpiler is being replaced and language spec being updated!
