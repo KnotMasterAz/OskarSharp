@@ -9,12 +9,6 @@ A simple, statically typed programming language focused on code generation, comp
 ### Important
 **NOTE**: A major rewrite is in progess, the old transpiler is being replaced and language spec being updated!
 
-**NOTE**: This is not a compiler and merely "finds and replaces" the instances of text to their C# counterpart as such will replace this text inside of comments and strings so should **not** be used in production!
-
-### Licence
-[Licence](LICENSE)
-
-
 ### Goals
 - Advance code generation
 - Imperative and strongly typed
@@ -23,36 +17,16 @@ A simple, statically typed programming language focused on code generation, comp
 - Enjoyable
 
 ## To-do
-- [ ] Change file extension to .oskar in code directory
-- [x] Console template
-- [X] Remove requirement on bash (rewrite build script in Python)
-- [X] Version validation
-- [X] Automatic ; insertion at the end of lines
-- [X] Add logging
-- [ ] Interactive mode (type so many commands and let them be run after a special compile/execute command is run)
-- [ ] Replace fun:<datatype> syntax for something more simple
-- [ ] Replace C# . to access properties with an _ for non-structs
-- [ ] Multi file support
-- [ ] More functions
-- [ ] Generate single code file (not a main file)
-- [ ] Structs (custom data type) support
-- [ ] Implement generics
-- [ ] Arrays
-- [ ] Lists
-- [ ] Preprocessor support (do not rely on the C# Preprocessor, that should be used using csh.#DIRECTIVE)
-- [ ] Unity support
-- [ ] Parse code instead of find and replace
-- [ ] Write the transpiler and build in KnotsSharp
-- [ ] Write documentation for the language
-- [ ] language spec
-- [ ] Language tests
-- [ ] Support for OOP features where needed to work with existing code
+- [ ] Finalise new spec
+- [ ] Implement new transpiler
+- [ ] Remove legacy from project
 
 ## Dependencies
 - Python 3
 - Dotnet
 
-## Build
+## Build (legacy)
+**NOTE**: This is not a compiler and merely "finds and replaces" the instances of text to their C# counterpart as such will replace this text inside of comments and strings so should **not** be used in production!
 ```sh
     git clone https://github.com/KnotMasterAz/OskarSharp.git
     cd OskarSharp
@@ -110,3 +84,6 @@ fun:float64 sum(float64 num1, string op, float64 num2) {
     }
 }
 ```
+
+### Licence
+[Licence](LICENSE)
