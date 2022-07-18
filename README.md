@@ -32,6 +32,8 @@ A simple, statically typed programming language focused on code generation power
 ## To-do
 - [WIP] Finalise new spec for OskarSharp
 - [ ] Finalise new spec for OskarSharper
+- [ ] Enums in OskarSharp
+- [ ] Dictionary in OskarSharp
 - [WIP] Finalise new spec for OskarSharpKnot
 - [WIP] Write a tokeniser
 - [ ] Implement new transpiler
