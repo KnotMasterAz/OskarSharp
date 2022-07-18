@@ -53,7 +53,7 @@ namespace Az
             string[] logicalOperators = System.IO.File.ReadAllLines("tokens/logical_operators.txt"); // Logical operators
 
             // Open file and read text
-            string text = System.IO.File.ReadAllText(@"./test.oskar");
+            string text = System.IO.File.ReadAllText(@"./test/main.oskar");
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -255,7 +255,7 @@ namespace Az
             }
 
             // Write to file
-            System.IO.File.WriteAllText(@"./test.oskar.knot", string_tokens);
+            System.IO.File.WriteAllText(@"./test/main.oskar.knot", string_tokens);
         }
     }
 }
