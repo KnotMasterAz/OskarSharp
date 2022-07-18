@@ -1,10 +1,13 @@
 using System;
 using Az.Tokenisation;
 
-namespace Az.Tokenisation {
-    public class Lexer {
-        public void Lex(string sourcefile) {
-             // Mode
+namespace Az.Tokenisation
+{
+    public class Lexer
+    {
+        public void Lex(string sourcefile)
+        {
+            // Mode
             Mode mode = Mode.Code;
 
             // Tokens list
@@ -43,10 +46,10 @@ namespace Az.Tokenisation {
                             // mode = Mode.Number;
                             token = new Token();
                             token.Type = Token.TokenType.Literal;
-                            token.Value = c.ToString();
+                            token.Value = "";
                             var dotCount = 0;
                             // FIXME: Prevent from crashing at end of line
-                            while (Char.IsDigit(text[i]) || text[i] == '.'  && i < text.Length - 1)
+                            while (Char.IsDigit(text[i]) || text[i] == '.' && i < text.Length - 1)
                             {
                                 if (text[i] == '.')
                                 {
@@ -87,7 +90,7 @@ namespace Az.Tokenisation {
                             tokens.Add(token);
                         }
                         // Separator
-                        else if (text[i] == ',' || text[i] == ':' || text[i] == '(' || text[i] == ')' || text[i] == '[' || text[i] == ']' || text[i] == '{' || text[i] == '}')
+                        else if (text[i] == ',' || text[i] == '(' || text[i] == ')' || text[i] == '[' || text[i] == ']' || text[i] == '{' || text[i] == '}')
                         {
                             token = new Token();
                             token.Type = Token.TokenType.Separator;
@@ -170,7 +173,7 @@ namespace Az.Tokenisation {
                         {
                             // Do nothing
                         }
-                        else if (Char.IsLetter(c))
+                        else if (Char.IsLetter(c) || c == '_')
                         {
                             // FIXME: Crash when keyword at the end of the file (no space only)
                             token = new Token();
