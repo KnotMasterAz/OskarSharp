@@ -217,7 +217,7 @@ namespace Az.Tokenisation {
             // Print tokens
             foreach (Token t in tokens)
             {
-                var string_token_current = $"{t.Type}\n\t{t.Value}\nend";
+                var string_token_current = $"{t.Type} <;;> {t.Value}";
                 string_tokens += string_token_current + "\n";
                 Console.WriteLine($"{t.Type}:\t{t.Value}");
             }

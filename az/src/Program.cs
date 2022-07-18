@@ -1,5 +1,6 @@
 ﻿using System;
 using Az.Tokenisation;
+using Experimental.Csharp;
 
 namespace Az
 {
@@ -23,6 +24,25 @@ namespace Az
             // Create a new tokeniser and parse the file.
             Lexer lexer = new Lexer();
             lexer.Lex(@"./test/main.oskar");
+        }
+    }
+}
+
+
+namespace Experimental.Csharp
+{
+    internal class Generator
+    {
+        public static void Generate(string knot)
+        {
+            string[] tokens = System.IO.File.ReadAllLines(knot); // Datatypes
+
+            // Loop through each line of the file.
+            foreach (string line in tokens)
+            {
+                // Split the line into tokens.
+                string[] tokens2 = line.Split(' <;;> ');
+            }
         }
     }
 }
