@@ -1,0 +1,23 @@
+pub i64 main -> str argc {
+	const f64 pi := 3.14
+	ret 0
+}
+
+priv pure show_message -> const str text, const str times {
+	repeat (times) {
+		print(text)
+	}
+}
+
+restricted u8 add -> {
+	const u8 a := random(data_min(u8), data_max(u8))
+	const u8 b := random(data_min(u8), data_max(u8))
+	mut u8 sum
+	sum := a + b
+	ret sum
+}
+
+datatype position {
+	restricted f64 x := 0
+	restricted f64 y := 0
+}
