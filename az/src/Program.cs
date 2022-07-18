@@ -27,11 +27,13 @@ namespace Az
 
             // Create a new tokeniser and parse the file.
             Lexer lexer = new Lexer();
-            lexer.Lex(@"./test/main.oskar");
+            lexer.Lex(args[0]);
+
+            Console.WriteLine("STATE:: LEXING HAS FINISHED!");
 
             #if CHAOS_MODE
             Generator generator = new Generator();
-            generator.Generate(@"./test/main.oskar.knot");
+            generator.Generate($"{args[0]}.knot");
             #endif
         }
     }

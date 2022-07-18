@@ -1,6 +1,6 @@
 ; comment
 
-pub i64 main -> str argc {
+pub i64 main -> str[] args {
 	const f64 pi := 3.14
 
 	print(add())
