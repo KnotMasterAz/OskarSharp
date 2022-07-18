@@ -3,7 +3,9 @@
 This is the specification for OskarSharpKnot (token language), for specification details on the language, see [OskarSharp](oskarsharp.md)
 
 ## Token schema
-Tokens are composed of a opening tag `<tag>` and closing tag `</tag>` and the value of the token inside that tag, the tag name should correspond to the category the token is a part of.
+Tokens are composed of a general tag (category) e.g. `Datatype`, a separator ` <;;> ` and the value of the tag (token itself) e.g. `i8`.
+
+Below is an example of tokens generated from a a simple hello world program:
 ```yaml
 Access <;;> pub
 Datatype <;;> i64
