@@ -6,6 +6,8 @@
 
 A simple, statically typed programming language focused on code generation powered by the dotnet framework
 
+# CURRENTLY BROKEN, REWRITE UNDERWAY!
+
 ## Components
 ### Languages
 - [OskarSharp](specification/oskarsharp.md) (programming language, transpiled, .oskar)
