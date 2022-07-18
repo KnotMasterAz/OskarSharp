@@ -1,42 +1,10 @@
-﻿using System;
+using System;
+using Az.Tokenisation;
 
-namespace Az
-{
-    internal class Program
-    {
-        enum Mode
-        {
-            Code,
-            Text,
-            Number,
-            Comment
-        }
-
-        struct Token
-        {
-            public TokenType Type;
-            public string Value;
-            public enum TokenType
-            {
-                Identifier,
-                Datatype,
-                Keyword,
-                Literal,
-                Operator,
-                Separator,
-                Comment,
-                Text,
-                Access,
-                Mutability,
-                LogicalOperator,
-                ComparisonOperator,
-                Symbols,
-            }
-        }
-
-        static void Main(string[] args)
-        {
-            // Mode
+namespace Az.Tokenisation {
+    public class Lexer {
+        public void Lex(string sourcefile) {
+             // Mode
             Mode mode = Mode.Code;
 
             // Tokens list
@@ -53,7 +21,7 @@ namespace Az
             string[] logicalOperators = System.IO.File.ReadAllLines("tokens/logical_operators.txt"); // Logical operators
 
             // Open file and read text
-            string text = System.IO.File.ReadAllText(@"./test/main.oskar");
+            string text = System.IO.File.ReadAllText(sourcefile);
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -240,7 +208,7 @@ namespace Az
                         break;
 
                     default:
-                        System.Console.WriteLine("Unknown mode!");
+                        Console.WriteLine("Unknown mode!");
                         break;
                 }
             }
@@ -255,7 +223,7 @@ namespace Az
             }
 
             // Write to file
-            System.IO.File.WriteAllText(@"./test/main.oskar.knot", string_tokens);
+            System.IO.File.WriteAllText($"{sourcefile}.knot", string_tokens);
         }
     }
 }
