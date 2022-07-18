@@ -1,90 +1,17 @@
-// Test single line comment
-
-// // These will be set by the compiler flags and auto inserted into the a temp file before generating the knot file
-// #define PLATFORM #to "Unity" #end
-//     #define LANGUAGE #to "CSHARP" #end
-// #define VERSION #to "2.0.0" #end
-// #define PREPROCESSOR #to "TRUE" #end
-
-// // Control flow
-// #is_equal PLATFORM #to "Unity" #begin
-//     #replace v3 #to Vector3 #end // vector3
-//     #replace v3_new #to new vector3 #end // vector3 create
-//     #replace v2 #to Vector2 #end // vector2
-//     #replace v2_new #to new vector2 #end // vector2 create
-//     #replace v4 #to Vector4 #end // vector4
-//     #replace v4_new #to new vector4 #end // vector4 create
-//     #replace trans #to Transform #end // transform
-//     #replace obj #to GameObject #end // gameobject
-//     #replace cam #to Camera #end // camera
-//     #replace show #to [SerializeField] #end // show in inspector
-//     #replace hide #to [HideInInspector] #end // hide in inspector
-//     #code
-//         using UnityEngine;
-//     #end
-// #end
-
-// #is_equal PREPROCESSOR #to "TRUE" #begin
-//     // Basic replace for code
-//     #replace pi #to 3.14 #end
-
-//     // Global replace
-//     #global_replace CUSTOM_NEWLINE_CHARACTER #to \n #end
-
-//     // Replace code example
-//     #replace
-//     halt
-//     #to
-//     while (true) {
-//         // Program halted
-//     }
-//     #end
-// #end
-
-fun:pure main() {
-    print("Hello, Knots!\nAwoos~\n"); // Test single line comment
-
-    const float32 add = adder(5, 6);
-    const float32 minus = subtractor(5, 6);
-    const float32 mult = multiplier(5, 6);
-    const float32 div = divider(5, 6);
-
-    lp (i < 5) {
-        print(i);
-    }
-
-    if (i == 5) {
-        print("i is 5");
+pub i64 main -> {
+    priv mut str text ; comment
+    priv mut str text2 := "World"
+    text := "Hello " + text2
+    print(text) ; comment 2
+    if i = 10 and i = 20 {
+        print("Hello")
     } else {
-        print("i is not 5");
+        print("World")
     }
-    trigger_send_event("do_something");
+    return 0
+    i := 1 <= 10
+    print(i)
+    i := 1 >= 10
+    print(i)
 }
-
-
-fun: float64 adder(float64 a, float64 b) {
-    ret a + b;
-}
-
-fun :float64 subtractor(float64 a, float64 b) {
-    ret a - b;
-}
-
-fun : float64 multiplier(float64 a, float64 b) {
-    ret a * b;
-}
-
-fun :float64 divider(float64 a, float64 b) {
-    ret a/b;
-}
-
-fun:trigger do_something() {
-    // do something
-    print("Triggering event " + (str)trigger_current);
-}
-
-// public static void trigger_mechanism(string) {
-//     if (trigger_current == "do_something") {
-//         do_something();
-//     }
-// }
+; Test comment

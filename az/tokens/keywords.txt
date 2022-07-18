@@ -1,0 +1,14 @@
+if
+else
+elseif
+finally
+when
+case
+event
+forever
+loop
+for
+each
+in
+jump
+label
