@@ -1,6 +1,13 @@
+; comment
+
 pub i64 main -> str argc {
 	const f64 pi := 3.14
-	ret 0
+
+	print(add())
+
+	show_message("Hello, world!", 10) ; comment
+
+	ret 0 ; comment
 }
 
 priv pure show_message -> const str text, const str times {
