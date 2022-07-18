@@ -4,22 +4,23 @@
 <h1 align="center">OskarSharp</h1>
 </p>
 
-A simple, statically typed programming language focused on code generation, compiling into C#
+A simple, statically typed programming language focused on code generation powered by the dotnet framework
 
 ## Components
 ### Languages
-- Oskarsharp (programming language, transpiled, .oskar)
-- OskarSharp Embed Language (preprocessor language, interpreted, N/A)
-- OskarSharp Token Language (generated tokens, generated, .knot)
+- [OskarSharp](specification/oskarsharp.md) (programming language, transpiled, .oskar)
+- [OskarSharper](specification/oskarsharper.md) (preprocessor language, interpreted, N/A)
+- [OskarSharpKnot](specification/oskarsharpknot.md) (generated tokens, generated, .knot)
 ## Parts
 - Az (transpiler for interpreting a single OskarSharp file or project.oskar file, into a OskarSharp Token Language and then transpile that into C#)
-- OskarSharp (Oskarsharp & OskarSharp Embed Language)
+- OskarSharp (OskarSharp & OskarSharp Embed Language)
 
 
 ### Important
-**NOTE**: A major rewrite is in progess, the old transpiler is being replaced and language spec being updated!
+**NOTE**: A major rewrite is in progress, the old transpiler is being replaced and language spec being updated!
 
 ### Goals
+- Configure the project using the language
 - Advance code generation
 - Imperative and strongly typed
 - Cross platform
@@ -27,73 +28,12 @@ A simple, statically typed programming language focused on code generation, comp
 - Enjoyable
 
 ## To-do
-- [ ] Finalise new spec
+- [WIP] Finalise new spec for OskarSharp
+- [ ] Finalise new spec for OskarSharper
+- [WIP] Finalise new spec for OskarSharpKnot
+- [WIP] Write a tokeniser
 - [ ] Implement new transpiler
 - [ ] Remove legacy from project
-
-## Dependencies
-- Python 3
-- Dotnet
-
-## Build (legacy)
-**NOTE**: This is not a compiler and merely "finds and replaces" the instances of text to their C# counterpart as such will replace this text inside of comments and strings so should **not** be used in production!
-```sh
-    git clone https://github.com/KnotMasterAz/OskarSharp.git
-    cd OskarSharp
-    python legacy/start.py code/hello.oskar --run --Console # Compile using the legacy compiler
-```
-
-## Examples
-
-### Hello, World!
-```cs
-//V0.1.0+
-fun:pure main() {
-    print("Hello, Knots!")
-}
-```
-
-### Calculator
-```cs
-//V0.1.1+
-fun:pure main() {
-    print_online("Number 1: ")
-    float64 num1 = csh.Convert.ToDouble(read())
-
-    print_online("Operator (+, -, *, /): ")
-    string op = read()
-
-    print_online("Number 2: ")
-    float64 num2 = csh.Convert.ToDouble(read())
-
-    float64 result = sum(num1, op, num2)
-
-    print($"{num1} {op} {num2} = {result}")
-
-    print("Hit enter to close program!")
-    read()
-}
-
-fun:float64 sum(float64 num1, string op, float64 num2) {   
-    switch (op) {
-        case "*":
-            return num1 * num2
-
-        case "/":
-            return num1 / num2
-
-        case "-":
-            return num1 - num2
-
-        case "+":
-            return num1 + num2
-        
-        default:
-            print("Error: Invalid operator!");
-            return -404
-    }
-}
-```
 
 ### Licence
 [Licence](LICENSE)

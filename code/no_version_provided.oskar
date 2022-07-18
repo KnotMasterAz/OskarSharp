@@ -1,3 +1,0 @@
-fun:pure main() {
-    print("Hello, Knots!")
-}

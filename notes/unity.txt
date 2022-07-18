@@ -1,8 +1,0 @@
-For Unity template, have a signal script generated with unique signals which each script can then use pass values and signals by
-signal_send("player_signal", "die")
-
-if (signal_received("player_signal", "die")) {
-    kill_player()
-    signal_clear_matches("player_signal", "die")
-    signal_clear_all("player_signal");
-}

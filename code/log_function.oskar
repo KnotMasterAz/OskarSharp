@@ -1,6 +1,0 @@
-//V0.2.2+
-fun:str log_messsage(uint8 level, str message) {
-    infer _log = $"{level}-{message}"
-    print("{_log}")
-    ret _log
-}

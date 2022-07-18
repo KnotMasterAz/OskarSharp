@@ -1,4 +1,0 @@
-//V0.2.2+
-fun:pure main() {
-    print("Hello, Knots!")
-}

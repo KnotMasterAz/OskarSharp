@@ -1,1 +1,0 @@
-Usage: file_to_compile.knots [--help] [--version] [--log] [--run] [--template=<template>] [--namespace=<namespace>] [--app_name=<app_name>] [--inherit=<inherit>] [--script_name=<script_name>] [--file=<file>]
