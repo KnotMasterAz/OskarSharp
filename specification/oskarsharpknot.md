@@ -31,3 +31,7 @@ Separator <;;> }
 - Separator
 - Text
 - Comment
+- Keyword
+- Operator
+- LogicalOperator
+- ComparisonOperator
