@@ -7,6 +7,8 @@
 A simple, statically typed programming language focused on code generation powered by the dotnet framework
 
 # CURRENTLY BROKEN, REWRITE UNDERWAY!
+(Currently only the tokeniser works and has edge causes which lead to crashes rn)
+
 
 ## Components
 ### Languages
